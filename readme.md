@@ -19,7 +19,7 @@ relevante y que se encuentra disponible en el actual sitio.
 * Desde el footer se debe mantener y adaptar en el navbar, proponer nuevo rotulados
 para que el navbar no se sature con categorías.
 * El newsletter debe integrarse con la API de Mailchimp
-* Corregir errores de redes sociales en el footer
+* Corregir errores de redes sociales en el footer (instagram)
 
 
 
@@ -30,6 +30,7 @@ para que el navbar no se sature con categorías.
 * Crear un mapa de navegación acorde al modelo de negocio y legible, con la información del footer al navbar y las categorías ya existentes. Para esta tarea se aplican estudios y métricas desde el punto de vista de experiencia usuario (UX).
 * Integrar API de Mailchimp con Newsletter.
 * Correcciones en footer de redes sociales.
-
-
+* Modificar iconos del header (entrega Edukim)
+* Cambiar color de materiales didacticos del header (agregar color del logo)
+* Revisar la visualización del Instagram que esta por sobre el footer.
 
