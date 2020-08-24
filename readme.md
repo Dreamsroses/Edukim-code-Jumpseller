@@ -1,10 +1,12 @@
-## Migración contenido a Jumpseller * Edukim
+## Migración contenido a Jumpseller - Edukim
 
 El siguiente trabajo tiene como objetivo crear capsulas de codigos, para subirlos a plataforma Jumpseller desde el actual sitio.
 
-[link Sitio actual Edukim!](https://edukim.cl/)
+[link Sitio actual Edukim](https://edukim.cl/)
 
-[link Nuevo sitio en Jumpseller Edukim!](https://ofertas.edukim.cl/ )
+[link Nuevo sitio en Jumpseller Edukim](https://ofertas.edukim.cl/ )
+
+
 
 **El Requerimiento:**
 
@@ -18,6 +20,7 @@ relevante y que se encuentra disponible en el actual sitio.
 para que el navbar no se sature con categorías.
 * El newsletter debe integrarse con la API de Mailchimp
 * Corregir errores de redes sociales en el footer
+
 
 
 **Las actividades:**
