@@ -29,8 +29,7 @@ para que el navbar no se sature con categorías.
 * Mejora de formulario de contacto e incorporar información datos de bodegas y contacto de ventas.
 * Crear un mapa de navegación acorde al modelo de negocio y legible, con la información del footer al navbar y las categorías ya existentes. Para esta tarea se aplican estudios y métricas desde el punto de vista de experiencia usuario (UX).
 * Integrar API de Mailchimp con Newsletter.
-* Correcciones en footer de redes sociales.
+* Correcciones en footer de redes sociales. (Revisar la visualización del Instagram que esta por sobre el footer.)
 * Modificar iconos del header (entrega Edukim)
 * Cambiar color de materiales didacticos del header (agregar color del logo)
-* Revisar la visualización del Instagram que esta por sobre el footer.
 
