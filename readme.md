@@ -36,8 +36,7 @@ para que el navbar no se sature con categorías.
 
 **Contributors:**
 
-![Ximena Videla](assets/img/xime.png)
+![](assets/img/fotos.png)
 
 
-![Rosa Morales](assets/img/Rosa.png)
 
