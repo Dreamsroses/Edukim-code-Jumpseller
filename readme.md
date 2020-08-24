@@ -33,3 +33,13 @@ para que el navbar no se sature con categorías.
 * Modificar iconos del header (entrega Edukim)
 * Cambiar color de materiales didacticos del header (agregar color del logo)
 
+
+**Contributors:**
+
+![Ximena Videla](assets/img/xime.png)
+Format: ![Alt Text](La Xime)
+
+
+![Rosa Morales](assets/img/Rosa.png)
+Format: ![Alt Text](La Rosa)
+
