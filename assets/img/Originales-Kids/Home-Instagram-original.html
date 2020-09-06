@@ -1,0 +1,93 @@
+<div id="homepage">
+    {% include 'slider_home' %}
+    {% include 'intro_boxes' %}
+
+
+
+    {% unless options.display_products_homepage == "no_products_display" %}
+    <section id="home-products" class="bg-light">
+        <!-- Page Content -->
+        <div class="container">
+            <!-- Featured Products Section -->
+            {% unless options.display_products_homepage == "only_latest" %}
+            {% if products.featured != empty %}
+            <div id="home-featured-section" class="row">
+                <h2 class="section-title">{% t 'Featured Products' %}</h2>
+                <div class="row">
+                    {% if products.all == empty %}
+                    {% assign placeholders = "1,2,3,4" | split: "," %}
+                    {% for placeholder in placeholders %}
+                    {% include 'list_product_demo' %}
+                    {% endfor %}
+                    {%else%}
+                    <!-- Featured Products -->
+                    {% for product in products.featured limit:options.products_featured_limit %}
+                    <div class="col-md-3 col-6 product-block feature-product">
+                        {% include 'list_product' with product %}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div><!-- /.row -->
+            {% endif %}
+            {% endunless %}
+
+            <!-- Lastest Products Section -->
+            {% unless options.display_products_homepage == "only_featured" %}
+            <div id="home-lastest-section" class="row">
+                <h2 class="section-title">{% t 'Latest Products' %}</h2>
+                <div class="owl-carousel latest-products">
+                    {% if products.all == empty %}
+                    {% assign placeholders = "1,2,3,4,5,6" | split: "," %}
+                    {% for placeholder in placeholders %}
+                    {% include 'list_product_demo' %}
+                    {% endfor %}
+                    {%else%}
+                    <!-- Lastest Products -->
+                    {% for product in products.latest limit:options.products_home_limit %}
+                    <div class="product-block">
+                        {% include 'list_product' with product %}
+                    </div>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+            </div><!-- /.row -->
+            {% endunless %}
+
+        </div><!-- /.container -->
+    </section> <!-- end #home-products -->
+    {% endunless %}
+
+
+
+    <section id="banners">
+        <div class="container">
+            {% include 'section_banners' %}
+
+        </div>
+    </section>
+
+
+
+    {% if options.home_page_blog and pages.categories.category["Post"] != blank %}
+    {% include 'home_blog' %}
+    {% endif %}
+
+
+    {% if options.show-brands %}
+    {% include 'brands' %}
+    {% endif %}
+
+    <!-- Original script -->
+    <!-- {% if options.instafeed and social.instagram_url != blank %}
+{% include 'instagram' %}
+{% endif %} -->
+
+    <!-- Widget elfsight -->
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-adc257b2-5141-4d01-adc2-e2b4e1720a88"></div>
+
+
+
+</div>
+<!-- end #homepage -->
