@@ -1,0 +1,46 @@
+<section id="instagram-section">
+    <div class="container">
+      <div class="row title-ig pt-2 trsn">
+        <div class="col-6">
+          <h2 class="section-title">{% t "Follow Us" %}</h2>
+        </div>
+        <div class="col-6 text-right">
+          <h4><a href="{{ social.instagram_url }}" target="_blank" title="{% t "Follow Us" %} @{{ social.instagram_url | split: '/' | last }}" class="butn trsn mt-5 follows-int"><i class="fab fa-instagram"></i> /{{ social.instagram_url | split: '/' | last }}</a></h4>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row pt-2 trsn">
+        <div id="instagram" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 limit-{{ options.instagram-limit }}"></div>
+      </div>
+    </div>
+    <!-- Instagram code -->
+    <script>
+      $.ajax({
+        url: "https://js-instagram-proxy.herokuapp.com/{{ social.instagram_url | split: '/' | last }}/media",
+        dataType: "jsonp",
+        data: {
+          count: {{ options.instagram-limit }}
+        },
+        success: function(json) {
+          for (var i in json.posts) {
+            if(i >= {{options.instagram-limit}}){continue};
+            url = json.posts[i].display_url;
+            shortcode = json.posts[i].shortcode;
+  
+            newElement = document.createElement('div');
+            newElement.className = 'insta_img';
+            newElement.style = 'background-image: url(' + url + ')';
+  
+            newElementLink = document.createElement('a');
+            newElementLink.href = "https://www.instagram.com/p/" + shortcode;
+            newElementLink.appendChild(newElement);
+  
+            var clientHeight = document.getElementById('instagram').clientHeight;
+            document.getElementById("instagram").appendChild(newElementLink);
+          }
+        }
+      });
+    </script>
+  </section>
+  
